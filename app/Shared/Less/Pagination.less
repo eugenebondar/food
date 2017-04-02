@@ -1,0 +1,29 @@
+@import '../../MainTheme';
+
+.pagination__list {
+  li {
+    color: #41aad9;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 4px;
+    text-align: center;
+
+    &.current, &.disabled {
+      color: #606060;
+      cursor: default;
+    }
+
+    &.pag-nav {
+      font-size: 10px;
+
+      span {
+        position: relative;
+        top: -1px;
+      }
+    }
+  }
+}
+
+.findings-pagination {
+  display: inline-block;
+}

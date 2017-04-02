@@ -1,0 +1,72 @@
+@import '../../MainTheme';
+
+@maxHeight: 90vh - 109px + @settingsTabsHeight;
+
+.add-test-popup {
+  width: 570px;
+}
+
+.settings-modal-dialog {
+  width: 1000px;
+  .modal-dialog-content {
+    overflow-y: hidden;
+  }
+  .st__setting-panel{
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 500px;
+  }
+
+  .modal-dialog-content {
+    max-height: calc(@maxHeight);
+  }
+}
+
+.atp__wrap {
+  margin: 0 auto;
+  width: 500px;
+}
+
+.atp__button-section {
+  padding: 10px 0 0;
+  text-align: center;
+
+  button {
+    margin: 0 10px;
+  }
+}
+
+.atp__field {
+  margin-bottom: 10px;
+
+  > div {
+    float: left;
+  }
+
+  .atp__label {
+    width: 200px;
+    text-align: right;
+    padding: 2px 10px;
+  }
+
+  .atp__input {
+    width: 300px;
+
+    &.error-input {
+      input, select {
+        border-color: #d22233;
+      }
+    }
+
+    span {
+      display: inline-block;
+      padding: 2px 0;
+    }
+  }
+
+  input, select {
+    width: 100%;
+    padding: 0 5px;
+    border: 1px solid #999999;
+  }
+}

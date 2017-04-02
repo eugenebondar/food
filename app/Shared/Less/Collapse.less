@@ -1,0 +1,230 @@
+@import "CollapseVariables";
+
+.react-sanfona {
+  margin-bottom: 17px;
+  border: 1px solid @headerBackgroundColor;
+  box-shadow: none;
+  position: relative;
+}
+
+.react-sanfona-item-title {
+  color: #333;
+  padding: 15px;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: @headerBackgroundColor;
+
+  &.react-sanfona-item-expanded {
+    background-color: #f2f2f2;
+    border: 1px solid #d7d7d7;
+  }
+
+  h3 {
+    font-weight: normal;
+    font-size: 14px;
+  }
+}
+
+.react-sanfona-item-body-wrapper {
+  padding: @bodyVerticalPadding @bodyHorizontalPadding;
+  background-color: #f5f8f9;
+}
+
+.ts__row {
+  .react-sanfona-item-title {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    color: #0290d7;
+    padding: 0;
+  }
+
+  .react-sanfona {
+    border: medium none;
+    margin: 0;
+  }
+
+  .react-sanfona-item {
+    padding: 5px 0;
+  }
+
+  .react-sanfona-item-body-wrapper {
+    background: none;
+  }
+
+  .react-sanfona-item {
+    h3 {
+      color: #545454;
+      padding-left: 30px;
+
+      &::before {
+        content: "e";
+        left: 12px;
+        margin-top: -6px;
+      }
+    }
+
+    &.react-sanfona-item-expanded > h3::before {
+      content: "S";
+    }
+  }
+}
+
+.finding-sub-collapse .react-sanfona {
+  border: medium none;
+
+  h3, .react-sanfona-item-body-wrapper {
+    border-bottom: 1px solid #cdcdcd;
+  }
+}
+
+.react-sanfona-item {
+  &.react-sanfona-item-expanded {
+    > h3::before {
+      content: "W";
+    }
+  }
+
+  h3 {
+    padding-left: 45px;
+    position:  relative;
+    color: #565757;
+    font-weight: normal;
+
+    &::before, &::after {
+      position: absolute;
+      top: 50%;
+      -moz-osx-font-smoothing: grayscale;
+      font-family: spirent-icon-font;
+      font-style: normal;
+      font-variant: normal;
+      font-weight: 400;
+      line-height: 1;
+      text-transform: none;
+    }
+
+    &::before {
+      margin-top: -5px;
+      content: "V";
+      left: 1225px;
+      font-size: 10px;
+    }
+  }
+}
+
+.test-panel, .customers-table, .user-page, .classifications-panel, .categories-panel {
+  .react-sanfona-item h3 {
+    &::after {
+      font-size: 16px;
+      left: 20px;
+      margin-top: -9px;
+    }
+  }
+}
+
+.test-panel {
+  .react-sanfona-item h3 {
+    &::after {
+      content: "ณ";
+    }
+  }
+}
+
+.customers-table {
+  .react-sanfona-item h3 {
+    &::after {
+      font-family: FontAwesome;
+      content: "";
+      margin-top: -8px;
+    }
+  }
+}
+
+.categories-panel {
+  .react-sanfona-item h3 {
+    &::after {
+      font-family: FontAwesome;
+      content: "";
+      margin-top: -8px;
+    }
+  }
+}
+
+.classifications-panel {
+  .react-sanfona-item h3 {
+    &::after {
+      font-family: FontAwesome;
+      content: "";
+      margin-top: -8px;
+    }
+  }
+}
+
+.user-page {
+  .react-sanfona-item h3 {
+    &::after {
+      font-family: FontAwesome;
+      content: "";
+      margin-top: -8px;
+      left: 20px;
+    }
+  }
+}
+
+.fd__finding-content {
+  .react-sanfona-item {
+    h3 {
+      background-color: #818D95;
+      color: #ffffff;
+      padding: 7px 0 7px 40px;
+      font-family: 'open-sans-regular';
+
+      &::before {
+        content: "U";
+        margin-top: -3px;
+        left: 10px;
+        font-size: 9px;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 1px;
+        background-color: #CDCDCD;
+        height: 29px;
+        display: initial;
+        top: 0;
+        left: 29px;
+      }
+    }
+
+    &.react-sanfona-item-expanded {
+      > h3::before {
+        content: 'S';
+      }
+    }
+  }
+
+  .finding-sub-collapse .react-sanfona-item {
+
+    h3 {
+      background-color: #EBEBEB;
+      color: #666666;
+    }
+  }
+
+  .react-sanfona-item-body-wrapper {
+    padding: 0;
+  }
+
+  .finding-sub-collapse .fd__expand {
+    margin: 0;
+  }
+
+  .fb-expand-content {
+    padding: 10px;
+  }
+
+  .react-sanfona {
+    margin: 0;
+    border-color: #CDCDCD;
+  }
+}

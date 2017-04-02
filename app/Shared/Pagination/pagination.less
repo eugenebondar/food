@@ -1,0 +1,31 @@
+@import '../../MainTheme';
+
+.pagination__list {
+  text-align: right;
+  margin: 10px 0;
+
+  li {
+    background-color: @mainColor;
+    color: @white;
+    display: inline-block;
+    text-align: center;
+    width: 25px;
+    margin: 0 2px;
+    border: 1px solid @mainColor;
+    cursor: pointer;
+
+    &.current {
+      background-color: @white;
+      border-color: @black;
+      color: @black;
+      cursor: default;
+    }
+
+    &.pag-nav {
+      border: none;
+      color: @black;
+      background-color: @white;
+      width: 15px;
+    }
+  }
+}

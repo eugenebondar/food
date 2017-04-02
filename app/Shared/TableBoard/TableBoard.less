@@ -1,0 +1,433 @@
+@import '../FilterList/FilterListVariables';
+@import '../../MainTheme';
+@expandBtnWidth: 30px;
+
+.react-sanfona-subheader-section {
+
+    @width-of-label: 6.5em;
+    .selected-filter-options-list-label {
+        float: left;
+        width: @width-of-label;
+        margin-top: @filterListPaddingVertical;
+    }
+
+    .selected-filter-options-list {
+        margin-left: @width-of-label;
+    }
+}
+
+.fa.table-configuration {
+    font-size: 24px;
+    position: relative;
+    top: 3px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.column-items{
+    width: 100%;
+    max-width: 600px;
+    .column-item {
+        width: 33%;
+        input{
+            margin-right: 10px;
+        }
+    }
+}
+
+.test__table__component {
+    background-color: @mainTableColor;
+    border-collapse: collapse;
+    margin: 15px 0;
+    width: 100%;
+
+    .selected-tr {
+        td {
+            background-color: #C3E4F2;
+        }
+    }
+
+    td {
+        height: 22px;
+        padding: 0!important;
+        position: relative;
+    }
+
+    td, th {
+        word-wrap: break-word;
+        word-break: break-all;
+
+        > span {
+            vertical-align: middle;
+            display: inline-block;
+            width: 100%;
+        }
+    }
+
+    th.sortable-th {
+        cursor: pointer;
+
+        .sorting-icon {
+            display: inline-block;
+            margin-right: 5px;
+            top: 0;
+            width: 10px;
+        }
+
+        .sorting-icon-selected {
+            font-size: 7px;
+
+            &::before {
+                padding-left: 3px;
+                display: inline-block;
+            }
+
+            &.sc-icon-up-arrow, .sc-icon-down-arrow {
+                top: 0;
+                position: relative;
+            }
+        }
+    }
+
+    td:last-child, th:last-child{
+        border-right: 1px solid #EEE;
+    }
+
+    td:first-of-type {
+        .row-info-cell {
+            display: inline-block;
+            position: relative;
+            height: 100%;
+            width: 100%;
+
+            button, span {
+                padding: 5px;
+            }
+
+            button {
+                border-right: 1px solid @thirdBGColor;
+
+                &:focus{
+                    outline: none;
+                }
+            }
+        }
+    }
+
+    a {
+        cursor: pointer;
+    }
+
+    .expand-btn {
+        background: transparent none repeat scroll 0 0;
+        border: none;
+        border-right: 1px solid #eeeeee;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: @expandBtnWidth;
+        z-index: 2;
+    }
+
+    .expand-cell {
+        position: relative;
+
+        input {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            margin: 0;
+            transform: translate(0,-50%);
+            z-index: 10;
+        }
+    }
+
+    .expand-cell-wrap {
+        text-align: left;
+        display: inline-block;
+        padding-left: @expandBtnWidth;
+        width: 100%;
+    }
+
+    &.sc-table tbody tr td {
+        vertical-align: middle;
+    }
+}
+
+.tests-expand-content {
+
+    .filters {
+        font-size: @font-size-lg;
+
+        .filter-checkbox {
+            margin-bottom: 5px;
+
+            input {
+                position: relative;
+                top: 2px;
+                margin-right: 2px;
+            }
+
+            span {
+                font-weight: 400;
+                margin-right: 10px;
+
+                &:first-of-type {
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .filter-search {
+            margin-top: 10px;
+
+            span{
+                cursor: pointer;
+                margin-left: 10px;
+                position: relative;
+                top: -1px;
+            }
+        }
+    }
+}
+
+.test__table__component-collapse {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.test__table__component th.sortable {
+    cursor: pointer;
+}
+
+.test-action-btn {
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 30px;
+    font-size: @font-size-xl;
+    background: transparent;
+
+    &:focus{
+        outline: none;
+    }
+}
+
+.table-action-list-wrapper{
+    border-top: 20px solid transparent;
+    position: absolute;
+    top: 5px;
+    right: 0;
+    .table-action-dropdown-list{
+        position: relative;
+    }
+}
+
+.sc-table {
+    .expand-tr {
+        &:nth-child(n) {
+            td {
+                background-color: #C3E4F2;
+
+                .test-table-cel-wrap, &:hover, .test-table-cel-wrap {
+                    position: static;
+                    background-color: #C3E4F2;
+                }
+
+                &.expand-cell {
+                    position: relative;
+
+                    .test-table-cel-wrap {
+                        width: 100%;
+                        text-align: left;
+                    }
+                    &:hover {
+                        .test-table-cel-wrap {
+                            padding-left: 7px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.test-actions-wrap {
+    display: inline-block;
+    position: relative;
+}
+
+.center {
+    text-align: center;
+}
+
+.filters .filter-search span {
+    cursor: pointer;
+    margin-left: 10px;
+    position: relative;
+    top: -1px;
+}
+
+.sc-table > thead > tr > th {
+    text-transform: none;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 8px 5px !important;
+}
+
+.empty-table {
+    background-color: #c3e4f2;
+    height: 30px;
+    vertical-align: middle;
+
+    > div {
+        padding: 5px;
+    }
+}
+
+.checkbox-filter {
+    margin-bottom: 10px;
+
+    .select-component li{
+        width: 100%;
+        padding-right: 0;
+    }
+
+    li {
+        cursor: pointer;
+        display: inline-block;
+        width: 50%;
+        margin-right: -0.25em;
+        padding-right: 10px;
+
+        span {
+            display: inline-block;
+            margin-left: 5px;
+        }
+    }
+}
+
+div.search-filter {
+    margin-bottom: 10px;
+
+    input {
+        max-width: 172px;
+        display: inline-block;
+    }
+
+    span {
+        display: inline-block;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+    &.disabled-filter {
+        display: none;
+    }
+}
+
+.reset-filter {
+    button {
+        background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+        border: medium none;
+        color: #41aad9;
+        cursor: pointer;
+        outline: none;
+    }
+
+    span {
+        display: inline-block;
+        margin-right: 5px;
+    }
+}
+
+.expand-tr {
+    .test-table-cel-wrap {
+        position: static;
+        overflow: visible;
+        white-space: normal;
+    }
+}
+
+.sc-table td:hover {
+    .test-table-cel-wrap.status__label {
+        height: auto;
+        max-width: 100%;
+    }
+
+    .test-table-cel-wrap {
+        left: 0;
+        overflow: visible;
+        position: absolute;
+        top: 0;
+        white-space: normal;
+        width: 100%;
+        z-index: 1;
+    }
+
+    &.expand-cell .test-table-cel-wrap {
+        left: auto;
+        padding-left: 8px;
+        right: 1px;
+        width: calc(~"100%" - @expandBtnWidth);
+
+        &.cont-with-checkbox {
+            padding-left: 2px;
+        }
+    }
+}
+
+.test-table-cel-wrap {
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+    padding: 7px;
+    text-overflow: ellipsis;
+    background-color: @mainTableColor;
+
+    &.cont-with-checkbox {
+        padding-left: @expandBtnWidth;
+        text-align: center;
+    }
+}
+
+.test-table-expired-cel-wrap {
+    color: #D22233;
+}
+
+.sc-table-striped tr:nth-child(2n) .test-table-cel-wrap {
+    background-color: @secondaryTableColor;
+}
+
+.test-table-cel-wrap.label {
+    display: inline-block;
+    padding: .2em .6em .3em;
+    margin-top: 8px;
+}
+
+.td-array-value-wrap .qtip-hover-target > a {
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+    padding: 7px;
+    text-overflow: ellipsis;
+}
+
+.sc-table .tooltip-body {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.td-array-value-wrap > a {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+    display: inline-block;
+    width: 100%;
+}
+
+.table-conf-btn-wrap {
+    display: inline-block;
+}

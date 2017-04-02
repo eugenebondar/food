@@ -1,0 +1,124 @@
+@import '../../Mixins';
+
+.sl-form {
+  position: relative;
+}
+
+.sl-form__group {
+  .clearfix();
+  display: block;
+  margin-bottom: 5px;
+}
+
+.sl-form__control-group {
+  overflow: hidden;
+}
+
+.sl-form__panel:extend(.sl-form__group) {
+  background: #e6e6e6;
+  padding: 10px;
+
+  // Add left/right space fix for modals
+  .modal-dialog-content & {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
+
+.sl-form__label {
+  position: relative;
+  display: block;
+
+  .sl-form_horizontal & {
+    float: left;
+    width: 200px;
+    padding-top: 7px;
+    padding-right: 10px;
+  }
+}
+
+.sl-form__label-required:after {
+  position: absolute;
+  display: inline-block;
+  content: '*';
+  color: #f00;
+  margin-left: 2px;
+}
+
+.sl-form__control {
+  display: block;
+  width: 100%;
+  padding: 5px 4px;
+
+  .sl-form_horizontal & {
+    width: 60%;
+  }
+}
+
+select.sl-form__control,
+select.sl-form__addon-right {
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  height: 30px;
+}
+
+.sl-form__addon-right {
+  float: right;
+
+  & + .sl-form__control {
+    width: ~"calc(100% - 55px)";
+  }
+}
+
+.sl-form__checkbox {
+  display: block;
+  cursor: pointer;
+  
+  > input[type=checkbox] {
+    margin-right: 5px;
+  }
+
+  &:first-child {
+    margin-top: 8px;
+  }
+}
+
+.sc-btn-primary.sc-disabled,
+.sc-btn-primary.sc-disabled.sc-active,
+.sc-btn-primary.sc-disabled:active,
+.sc-btn-primary.sc-disabled:focus,
+.sc-btn-primary.sc-disabled:hover,
+.sc-btn-primary[disabled],
+.sc-btn-primary[disabled].sc-active,
+.sc-btn-primary[disabled]:active,
+.sc-btn-primary[disabled]:focus,
+.sc-btn-primary[disabled]:hover,
+fieldset[disabled] .sc-btn-primary,
+fieldset[disabled] .sc-btn-primary.sc-active,
+fieldset[disabled] .sc-btn-primary:active,
+fieldset[disabled] .sc-btn-primary:focus,
+fieldset[disabled] .sc-btn-primary:hover,
+.disabled {
+  color: #b2b2b2!important;
+  background-color: #eaeaea!important;
+  border-color: #ccc!important;
+}
+
+.sc-txt-primary-hover:hover {
+  color: #005CA3;
+}
+
+.sc-bg-primary-children-hover > *:hover, .sc-bg-primary-hover:hover {
+  background-color: #005CA3!important;
+  color: #ffffff;
+}
+
+.sc-txt-primary-darker {
+  color: #005CA3;
+}
+
+.sc-border-primary-darker {
+  border-color: #005CA3;
+}

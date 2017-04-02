@@ -1,0 +1,97 @@
+@import '../../MainTheme';
+
+.modal-dialog-header {
+    font-size: @font-size-xl;
+    font-family: open-sans-semibold;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #005CA3;
+}
+
+.modal-dialog-contenty {
+    max-height: calc(~"90vh - 109px");
+    overflow-x: hidden;
+    overflow-y: auto;
+    min-height: 141px;
+    padding: 10px 0;
+    border-bottom: 10px solid transparent;
+
+    label {
+        font-size: @font-size-lg;
+        font-family: open-sans-regular;
+    }
+}
+
+.sc-dialog-body {
+    label {
+        font-size: @font-size-lg;
+        font-family: open-sans-regular;
+    }
+
+    .multiselect {
+        max-width: 260px;
+    }
+}
+
+.modal-dialog-buttons {
+    background-color: #E6E6E6;
+    text-align: right;
+    margin: 0 -15px;
+    border-top: #CDCDCD;
+    padding: 15px;
+
+    button{
+        margin-left: 15px;
+    }
+}
+
+.sc-dialog-box {
+    &.findings-details-popup, &.settings-modal-dialog {
+        width: 1000px;
+    }
+
+    &.customize-dialog {
+        width: 535px;
+    }
+
+    &.edit-contact {
+        width: 910px;
+    }
+
+    &.schedule-modal-dialog {
+        width: 500px;
+    }
+
+    &.small-dialog {
+        width: 300px;
+    }
+
+    &.status-dialog .sc-dialog-body {
+        padding-bottom: 25px;
+    }
+}
+
+.container .sc-dialog-content > .sc-dialog-body {
+    max-height: calc(~"100vh - (54px + 60px + 20px + 100px)");
+}
+
+.sc-dialog-body {
+    .sc-btn {
+        margin-left: 0;
+    }
+}
+.sc-dialog {
+    .sc-dialog-backdrop {
+        z-index: -1;
+    }
+
+
+    .sc-dialog-box {
+        .sc-dialog-title {
+            padding-left: 0;
+
+            &::after {
+                content: none;
+            }
+        }
+    }
+}

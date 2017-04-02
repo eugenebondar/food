@@ -1,0 +1,104 @@
+@import "../../MainTheme";
+
+.popover-filter {
+  position: relative;
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: top;
+
+  header {
+    display: none;
+  }
+
+  .square-checkbox-square input[type=checkbox] + span {
+    background-color: white;
+  }
+
+  .square-checkbox-label {
+    font-family: inherit;
+  }
+
+  .sc-panel {
+    border: 0;
+    margin-bottom: 0;
+
+    .sc-panel-heading {
+
+      .sc-collapse-icon {
+        margin-left: 4px;
+        margin-right: 8px;
+      }
+      .sc-collapse-icon.sc-icon-caret-up:before {
+        content: "\53";
+      }
+      .sc-collapse-icon.sc-icon-caret-down:before {
+        content: "\65";
+      }
+      background-color: #0290D7;
+      color: #fff;
+      padding: 2px;
+    }
+
+    &-title {
+      color: white;
+    }
+    &-body {
+      background-color: inherit;;
+      padding: 0;
+    }
+  }
+
+  .sc-panel .sc-panel-heading h3 {
+    color: white;
+    font-family: inherit;
+    font-size: 13px;
+    padding-left: 0 !important;
+
+    &:after {
+      content: "";
+    }
+  }
+
+  @border-color: #999999;
+  @background-color: #f2f2f2;
+  &.tooltip-container {
+    .qtip-chameleon-default {
+      background-color: @background-color;
+      border-color: @border-color;
+      width: 265px;
+
+      &:before {
+        border-right-color: @border-color;
+      }
+      &:after {
+        border-right-color: @background-color;
+      }
+    }
+  }
+
+  .tests-filter-btn {
+    background-color: @mainBGColor;
+    border: 1px solid;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 18px;
+    height: 30px;
+    text-align: center;
+    position: relative;
+    width: 30px;
+    top: 1px;
+    outline: none;
+    &[disabled] {
+      cursor: not-allowed;
+      background-color: @colorLightGrey;
+      color: @colorGrey;
+    }
+  }
+
+  .popover-title--visible {
+    .tests-filter-btn {
+      color: @mainBGColor;
+      background-color: #0290d7;
+    }
+  }
+}

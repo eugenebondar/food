@@ -1,0 +1,33 @@
+@import '../../MainTheme';
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+
+  th {
+    background-color: @mainColor;
+    color: @white;
+    font-weight: 500;
+    padding: 10px 5px;
+  }
+
+  td {
+    padding: 5px;
+    border: 1px solid @mainColorLighter;
+
+    &.td-name {
+      width: 30%;
+    }
+
+    &.td-cal, &.td-fats, &.td-carbohydrates, &.td-proteins {
+      width: 17.5%;
+      text-align: center;
+    }
+
+    input {
+      width: 35px;
+      display: inline-block;
+      margin-right: 15px;
+    }
+  }
+}
