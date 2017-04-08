@@ -8,4 +8,4 @@ Application to control daily nutrition plan
 - cd food
 - npm install webpack -g
 - npm install
-- npm start
+- npm run start
