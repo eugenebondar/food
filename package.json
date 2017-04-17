@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "classnames": "2.2.5",
+    "eslint-plugin-jest": "^19.0.1",
     "eventemitter3": "2.0.2",
     "extract-text-webpack-plugin": "^1.0.1",
     "font-awesome": "4.6.3",
@@ -46,7 +47,7 @@
     "eslint": "3.5.0",
     "eslint-config-airbnb": "11.1.0",
     "eslint-friendly-formatter": "2.0.6",
-    "eslint-loader": "1.5.0",
+    "eslint-loader": "^1.5.0",
     "eslint-plugin-import": "1.15.0",
     "eslint-plugin-jsx-a11y": "2.2.2",
     "eslint-plugin-react": "6.3.0",

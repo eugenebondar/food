@@ -7,7 +7,7 @@ module.exports = {
     // context: __dirname + '/src',
 
     entry: {
-        main: './app/Main.jsx'
+        main: './react/Main.jsx'
     },
 
     output: {
@@ -71,7 +71,11 @@ module.exports = {
         ]
     },
 
+    eslint: {
+        emitWarning: false
+    },
+
     devServer: {
-        contentBase: __dirname + '/app'
+        contentBase: __dirname + '/react'
     }
 };
