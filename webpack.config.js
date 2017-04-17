@@ -18,7 +18,7 @@ module.exports = {
 
     resolve: {
         extensions: ['', '.js', '.jsx']
-},
+    },
 
     devtool: 'cheap-inline-module-source-map',
 

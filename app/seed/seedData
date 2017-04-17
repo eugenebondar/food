@@ -1,0 +1,22 @@
+import productList from './productList';
+
+const seedData = {
+    users: [
+        {
+            type: 'admin',
+            firstName: 'Yevhen',
+            lastName: 'Bondar',
+            email: 'eugenebondar1@gmail.com',
+            password: 'Wonderwoman61'
+        }, {
+            type: 'user',
+            firstName: 'Dina',
+            lastName: 'Cheliadina',
+            email: 'erregt.raubtier@gmail.com',
+            password: 'abcd4321'
+        }
+    ],
+    products: productList
+};
+
+export default seedData;
