@@ -3,6 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
 const path = require('path');
 
+const appRootPath = path.resolve(__dirname, 'react');
+
 module.exports = {
     // context: __dirname + '/src',
 
@@ -17,7 +19,13 @@ module.exports = {
     },
 
     resolve: {
-        extensions: ['', '.js', '.jsx']
+      extensions: ['', '.js', '.jsx'],
+      alias: {
+        'Modules': path.join(appRootPath, 'Modules'),
+        'Shared': path.join(appRootPath, 'Shared'),
+        'Stores': path.join(appRootPath, 'Stores'),
+        'Utils': path.join(appRootPath, 'Utils')
+      }
     },
 
     devtool: 'cheap-inline-module-source-map',
