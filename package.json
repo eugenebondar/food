@@ -7,7 +7,8 @@
   "scripts": {
     "webpack-dev": "node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --watch",
     "dev": "nodemon --exec babel-node -- app/index.js && npm run webpack-dev",
-    "start": "easystatic start docs"
+    "start": "easystatic start docs",
+    "create-reflux-component": "node bin/create-reflux-component"
   },
   "license": "MIT",
   "keywords": [],
